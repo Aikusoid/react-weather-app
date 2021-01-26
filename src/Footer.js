@@ -18,7 +18,7 @@ export default function Footer() {
         <br />
         <a
           className="source"
-          href="https://github.com/Aikusoid/SheCodes-Weather-App"
+          href="https://github.com/Aikusoid/react-weather-app"
           rel="noreferrer"
           target="_blank"
         >
