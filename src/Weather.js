@@ -1,6 +1,7 @@
 import React from "react";
 import SearchForm from "./SearchForm";
 import DailyForecast from "./DailyForecast";
+import CurrentWeather from "./CurrentWeather";
 
 export default function Weather(){
     return(
