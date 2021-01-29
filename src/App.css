@@ -2,6 +2,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: white;
   background-image: linear-gradient(357deg, #a007178b 0%, #0059a7c9 90%);
+  line-height: 1.5;
 }
 .App {
   font-family: sans-serif;
@@ -18,19 +19,16 @@ body {
   border-radius: 10px;
   border: 2px solid hsla(0, 0%, 100%, 0.5);
 }
-.App div.today {
-  margin: 0 auto;
+.App div.col.today {
+  width: 265px;
   padding: 1%;
-  color: white;
-  line-height: 1.5;
 }
 .App div.row.today {
   background-color: rgba(202, 231, 235, 0.2);
   border-radius: 5px;
   text-align: center;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  /* border: 1px solid hsla(0, 0%, 100%, 0.5); */
+  padding: 1%;
+  margin: 0 auto;
 }
 .App div.col-6.weather-description {
   text-align: left;
@@ -75,10 +73,37 @@ body {
   text-decoration: none;
   cursor: default;
 }
-.App div.daily-forecast {
-  margin: 0 auto;
+.App .col-12 {
+  padding: 0px;
+}
+.App table.hourly-forecast {
+  border-collapse: separate;
+  border-spacing: 3px;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 5px;
+}
+.App th.hourly-forecast-data,
+.App td.hourly-forecast-data-temp {
+  width: 20%;
+  background-color: rgba(217, 249, 244, 0.2);
+  border-radius: 4px;
+}
+.App th.hourly-forecast-data {
+  height: 5.5em;
+  line-height: 2.5;
+}
+.App td.hourly-forecast-data-temp {
+  height: 2.6em;
+}
+.App img {
+  width: 100%;
+}
+.App div.col.daily-forecast {
+  margin: 0 0 8px;
   padding: 1%;
   color: white;
+  min-width: 265px;
 }
 .App div.row.daily-forecast {
   display: flex;
@@ -95,13 +120,13 @@ body {
 .App div.row.sun-position {
   font-size: 15px;
   padding: 1%;
-  margin: 7px;
+  margin: 1%;
   border-radius: 5px;
   background-color: rgba(217, 249, 244, 0.2);
 }
 .App div.col-12.sun-img {
-  padding: 1%;
   width: 100%;
+  padding: 1%;
 }
 .App img.sun-position {
   width: 100%;

@@ -2,12 +2,12 @@
   margin-top: 5px;
   margin-bottom: 10px;
   text-align: center;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 13px;
 }
 .Footer a.source {
   text-decoration: none;
-  color: rgb(10, 90, 165);
+  color: rgb(168, 232, 255);
 }
 .Footer a.source:hover {
   text-decoration: underline;
