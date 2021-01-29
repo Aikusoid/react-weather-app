@@ -9,11 +9,11 @@ export default function Weather(){
         <div className="Weather">
         <SearchForm />
         <div className="row weather-forecast-info">
-          <div className="col today">
+          <div className="col-6 today">
             <CurrentWeather />
             <HourlyForecast />
           </div>
-          <div className="col daily-forecast">
+          <div className="col-6 daily-forecast">
             <DailyForecast />
             <DailyForecast />
             <DailyForecast />

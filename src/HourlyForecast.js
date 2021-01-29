@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./HourlyForecast.css";
+
 export default function HourlyForecast() {
   return (
     <div className="HourlyForecast">
