@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 
 export default function Weather(){
-    return(
+  const[weatherData, setWeatherData]=useState({ready: false});
+
+  function handleResponse(response){
+    setWeatherData({
+      ready: true,
+      currentTemp: response.data.current.temp,
+      feels_like: response.data.current.feels_like,
+      humidity: response.data.current.humidity,
+      wind: response.data.current.wind_speed,
+      pressure: response.data.current.pressure,
+      description: response.data.current.weather[0].description,
+      iconUrl: "https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png",
+      date: "29/01/2021",
+      time: "15:24"
+    });
+  }
+
+if (weatherData.ready) {
+   return(
         <div className="Weather">
         <form id="search-city">
         <label id="weather-in">Weather in </label>
@@ -39,19 +57,19 @@ export default function Weather(){
                 <p>
                   <img
                     className="weather-icon"
-                    src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                    src={weatherData.iconUrl}
                     id="current-icon-description"
-                    alt=""
+                    alt={weatherData.description}
                   />
                   <br />
-                  <span id="description"></span>
+                  <span id="description" className="text-capitalize">{weatherData.description}</span>
                 </p>
               </div>
               <div className="col-6 current-city current-date">
                 <p>
-                  <span className="current-date">16/01/2021</span>
+                  <span className="current-date">{weatherData.date}</span>
                   <br />
-                  <span className="current-temperature" id="current-temp"></span>
+                  <span className="current-temperature" id="current-temp">{Math.round(weatherData.currentTemp)}</span>
                   <span className="units convert">
                     {" "}
                     <a href="/" id="celsius" className="active">
@@ -63,24 +81,24 @@ export default function Weather(){
                     </a>
                   </span>
                   <br />
-                  <span className="current-time">15:30</span>
+                  <span className="current-time">{weatherData.time}</span>
                 </p>
               </div>
               <div className="col-6 weather-description">
                 <p>
-                  Feels like: <span id="feels-like"></span>
+                  Feels like: <span id="feels-like">{Math.round(weatherData.feels_like)}</span>
                   <span className="units"> °C</span>
                   <br />
-                  Humidity: <span id="humidity">90</span>
+                  Humidity: <span id="humidity">{weatherData.humidity}</span>
                   <span className="units"> %</span>
                 </p>
               </div>
               <div className="col-6 pressure-wind weather-description">
                 <p>
-                  Wind speed: <span id="wind-speed">2</span>
+                  Wind speed: <span id="wind-speed">{Math.round(weatherData.wind)}</span>
                   <span className="units"> m/sec</span>
                   <br />
-                  Pressure: <span id="pressure">967</span>
+                  Pressure: <span id="pressure">{weatherData.pressure}</span>
                   <span className="units"> hPa</span>
                 </p>
               </div>
@@ -264,4 +282,14 @@ export default function Weather(){
         </div>
       </div>
     );
+} else {
+  const apiKey = `b81cb38c0b17e133191f4fac4a0b3833`;
+  let endPoint =`https://api.openweathermap.org/data/2.5/onecall?lat=50.073658&lon=14.418540&appid=${apiKey}&units=metric`;
+  axios.get(endPoint).then(handleResponse);
+
+  return "Loading...";
+}
+
+  
+   
 }
