@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 
 export default function Weather(){
@@ -17,10 +18,8 @@ export default function Weather(){
       description: response.data.current.weather[0].description,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png",
       date: new Date(response.data.current.dt*1000),
-      time: "15:24"
     });
   }
-console.log(weatherData.date)
 if (weatherData.ready) {
    return(
         <div className="Weather">
@@ -84,7 +83,7 @@ if (weatherData.ready) {
                     </a>
                   </span>
                   <br />
-                  <span className="current-time">{weatherData.time}</span>
+                  <FormattedTime time={weatherData.date} />
                 </p>
               </div>
               <div className="col-6 weather-description">

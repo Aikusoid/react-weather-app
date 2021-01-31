@@ -10,7 +10,6 @@ export default function FormattedDate(props){
     if (month<10){
         month=`0${month}`;
     };
-    console.log(month);
     let year = props.date.getFullYear();
     return(
         <span className="FormattedDate">
