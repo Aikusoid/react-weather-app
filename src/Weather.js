@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./FormattedDate";
 
 
 export default function Weather(){
   const[weatherData, setWeatherData]=useState({ready: false});
 
   function handleResponse(response){
+    console.log(response.data);
     setWeatherData({
       ready: true,
       currentTemp: response.data.current.temp,
@@ -15,7 +17,7 @@ export default function Weather(){
       pressure: response.data.current.pressure,
       description: response.data.current.weather[0].description,
       iconUrl: "https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png",
-      date: "29/01/2021",
+      date: new Date(response.data.current.dt*1000),
       time: "15:24"
     });
   }
@@ -67,7 +69,9 @@ if (weatherData.ready) {
               </div>
               <div className="col-6 current-city current-date">
                 <p>
-                  <span className="current-date">{weatherData.date}</span>
+                  <span className="current-date">
+                    <FormattedDate date={weatherData.date.getDate()} />
+                  </span>
                   <br />
                   <span className="current-temperature" id="current-temp">{Math.round(weatherData.currentTemp)}</span>
                   <span className="units convert">
