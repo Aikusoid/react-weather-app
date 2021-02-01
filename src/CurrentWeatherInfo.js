@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
+import CurrentWeatherIcon from "./CurrentWeatherIcon";
 
 export default function CurrentWeatherInfo(props){
     return(
@@ -11,12 +12,7 @@ export default function CurrentWeatherInfo(props){
                 </div>
                 <div className="col-6 current-city">
                     <p>
-                        <img
-                            className="weather-icon"
-                            src={props.data.iconUrl}
-                            id="current-icon-description"
-                            alt={props.data.description}
-                        />
+                        <CurrentWeatherIcon code={props.data.icon} />
                         <br />
                         <span id="description" className="text-capitalize">{props.data.description}</span>
                     </p>
