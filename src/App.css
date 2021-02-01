@@ -191,11 +191,10 @@ body {
   font-weight: bold;
   font-size: 25px;
 }
-.App #current-icon-description {
-  width: 70%;
-  margin: 0 auto;
+.App canvas {
+  width: 45%;
+  margin: 7px 0;
 }
-
 .App .days {
   border-radius: 4px;
   background-color: rgba(217, 249, 244, 0.2);
