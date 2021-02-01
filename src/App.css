@@ -47,29 +47,30 @@ body {
 .App p {
   margin: 0 auto;
 }
-
+.App canvas {
+  width: 45%;
+  margin: 10px 0;
+}
 .App span.current-date {
   font-size: 16px;
 }
-.App span.current-temperature {
-  font-size: 30px;
+.App div.WeatherTemp {
+  font-size: 27px;
   font-weight: bold;
+  margin: 10px 0;
 }
 .App a#celsius,
 .App a#fahrenheit {
   color: white;
 }
 .App span.units.convert {
-  font-size: 18px;
+  font-size: 15px;
   position: relative;
-  top: -8px;
+  top: -12px;
   color: white;
+  font-weight: lighter;
 }
-.App span.convert .active {
-  color: white;
-  text-decoration: none;
-  cursor: default;
-}
+
 .App .col-12 {
   padding: 0px;
 }
@@ -191,10 +192,7 @@ body {
   font-weight: bold;
   font-size: 25px;
 }
-.App canvas {
-  width: 45%;
-  margin: 7px 0;
-}
+
 .App .days {
   border-radius: 4px;
   background-color: rgba(217, 249, 244, 0.2);
