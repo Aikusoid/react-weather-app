@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultLat={50.073658} defaultLon={14.418540} />
+        <Weather defaultCity="Prague" />
          <Footer />
       </div>
     </div>

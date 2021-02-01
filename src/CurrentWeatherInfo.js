@@ -7,7 +7,7 @@ export default function CurrentWeatherInfo(props){
         <div className="CurrentWeatherInfo">
             <div className="row today">
                 <div className="col-12">
-                    <span id="required-city">{props.cityName.city}</span>
+                    <span id="required-city">{props.data.city}</span>
                 </div>
                 <div className="col-6 current-city">
                     <p>
