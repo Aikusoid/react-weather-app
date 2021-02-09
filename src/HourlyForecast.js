@@ -1,76 +1,57 @@
 import React from "react";
+import HourlyForecastItem from "./HourlyForecastItem";
+import HourlyForecastTemp from "./HourlyForecastTemp";
 
-export default function HourlyForecast(){
-    return(
-        <div className="HourlyForecast">
-            <div className="col-12">
-              <table className="hourly-forecast">
-                <thead className="hourly-forecast">
-                  <tr className="hourly-forecast">
-                    <th className="hourly-forecast-data">
-                      <div className="hourly-forecast-time">16:00</div>
-                      <img
-                        className="hourly-forecast-icon"
-                        src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-                        alt=""
-                      />
-                    </th>
-                    <th className="hourly-forecast-data">
-                      <div className="hourly-forecast-time">17:00</div>
-                      <img
-                        className="hourly-forecast-icon"
-                        src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-                        alt=""
-                      />
-                    </th>
-                    <th className="hourly-forecast-data">
-                      <div className="hourly-forecast-time">18:00</div>
-                      <img
-                        className="hourly-forecast-icon"
-                        src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-                        alt=""
-                      />
-                    </th>
-                    <th className="hourly-forecast-data">
-                      <div className="hourly-forecast-time">19:00</div>
-                      <img
-                        className="hourly-forecast-icon"
-                        src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-                        alt=""
-                      />
-                    </th>
-                    <th className="hourly-forecast-data">
-                      <div className="hourly-forecast-time">20:00</div>
-                      <img
-                        className="hourly-forecast-icon"
-                        src="https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-                        alt=""
-                      />
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="hourly-forecast">
-                  <tr className="hourly-forecast">
-                    <td className="hourly-forecast-data-temp">
-                      <span className="hourly-forecast-temp">-3</span>
-                      °C
-                    </td>
-                    <td className="hourly-forecast-data-temp">
-                      <span className="hourly-forecast-temp">-2</span> °C
-                    </td>
-                    <td className="hourly-forecast-data-temp">
-                      <span className="hourly-forecast-temp">-3</span> °C
-                    </td>
-                    <td className="hourly-forecast-data-temp">
-                      <span className="hourly-forecast-temp">-3</span> °C
-                    </td>
-                    <td className="hourly-forecast-data-temp">
-                      <span className="hourly-forecast-temp">-5</span> °C
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-        </div>
-    );
+export default function HourlyForecast(props) {
+  return (
+    <div className="HourlyForecast">
+      <div className="col-12">
+        <table className="hourly-forecast">
+          <thead className="hourly-forecast">
+            <tr className="hourly-forecast">
+              <HourlyForecastItem
+                time={new Date(props.data.hourly[1].dt * 1000).getHours()}
+                icon={props.data.hourly[1].weather[0].icon}
+              />
+              <HourlyForecastItem
+                time={new Date(props.data.hourly[2].dt * 1000).getHours()}
+                icon={props.data.hourly[2].weather[0].icon}
+              />
+              <HourlyForecastItem
+                time={new Date(props.data.hourly[3].dt * 1000).getHours()}
+                icon={props.data.hourly[3].weather[0].icon}
+              />
+              <HourlyForecastItem
+                time={new Date(props.data.hourly[4].dt * 1000).getHours()}
+                icon={props.data.hourly[4].weather[0].icon}
+              />
+              <HourlyForecastItem
+                time={new Date(props.data.hourly[5].dt * 1000).getHours()}
+                icon={props.data.hourly[5].weather[0].icon}
+              />
+            </tr>
+          </thead>
+          <tbody className="hourly-forecast">
+            <tr className="hourly-forecast">
+              <HourlyForecastTemp
+                temp={Math.round(props.data.hourly[1].temp)}
+              />
+              <HourlyForecastTemp
+                temp={Math.round(props.data.hourly[2].temp)}
+              />
+              <HourlyForecastTemp
+                temp={Math.round(props.data.hourly[3].temp)}
+              />
+              <HourlyForecastTemp
+                temp={Math.round(props.data.hourly[4].temp)}
+              />
+              <HourlyForecastTemp
+                temp={Math.round(props.data.hourly[5].temp)}
+              />
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 }
