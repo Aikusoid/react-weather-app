@@ -12,7 +12,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [hourlyForecast, setHourlyForecast] = useState(null);
   const apiKey = `b81cb38c0b17e133191f4fac4a0b3833`;
-  const root = `http://api.openweathermap.org`;
+  const root = `https://api.openweathermap.org`;
 
   function handleResponse(response) {
     setHourlyForecast(response.data);
