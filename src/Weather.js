@@ -6,7 +6,7 @@ import DailyForecast from "./DailyForecast";
 import SunriseSunset from "./SunriseSunset";
 import axios from "axios";
 
-export default function Weather(props) {
+export default function Weather() {
   const [city, setCity] = useState(null);
   const [requiredCity, setRequiredCity] = useState(null);
   const [weatherData, setWeatherData] = useState({ ready: false });
