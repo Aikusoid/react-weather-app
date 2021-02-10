@@ -26,6 +26,7 @@ export default function Weather(props) {
       description: response.data.current.weather[0].description,
       icon: response.data.current.weather[0].icon,
       date: new Date(response.data.current.dt * 1000),
+      forecast: response.data,
     });
   }
 
@@ -96,10 +97,10 @@ export default function Weather(props) {
         <div className="row weather-forecast-info">
           <div className="col today">
             <WeatherInfo data={weatherData} city={requiredCity} />
-            <HourlyForecast data={hourlyForecast} />
+            <HourlyForecast data={weatherData} />
           </div>
           <div className="col daily-forecast">
-            <DailyForecast />
+            <DailyForecast data={weatherData} />
           </div>
         </div>
         <SunriseSunset />
