@@ -71,10 +71,6 @@ body {
   border: 1px solid hsla(0, 0%, 100%, 0.5);
 }
 
-.App #required-city {
-  font-weight: bold;
-  font-size: 25px;
-}
 .App .weather-forecast-info {
   margin: 15px 0;
   margin-bottom: 5px;

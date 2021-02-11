@@ -3,15 +3,21 @@
   border-radius: 5px;
   text-align: center;
   padding: 2%;
+  padding-top: 18px;
   margin: 0 auto;
+  line-height: 1.4em;
+}
+.WeatherInfo #required-city {
+  font-weight: bold;
+  font-size: 25px;
 }
 .WeatherInfo div.row.today:hover {
   background-color: rgba(202, 231, 235, 0.2);
   transition: all 200ms ease-in-out;
 }
 .WeatherInfo img {
-  width: 100px;
-  margin-top: -10px;
+  width: 124px;
+  margin: -12px -12px;
 }
 .WeatherInfo div.col-6.weather-description {
   text-align: left;
@@ -27,12 +33,15 @@
   display: block;
   font-weight: bold;
   font-size: 14px;
+  margin-top: -12px;
 }
 .WeatherInfo p {
   margin: 0 auto;
 }
 .WeatherInfo span.current-date {
   font-size: 16px;
+  display: block;
+  padding-top: 15px;
 }
 .WeatherInfo div.WeatherTemp {
   font-size: 27px;
