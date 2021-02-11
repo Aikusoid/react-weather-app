@@ -1,5 +1,5 @@
 .DailyForecast .daily-forecast-temp {
-  margin-top: 7px;
+  margin-top: -10px;
 }
 
 .DailyForecast div.row.daily-forecast {
@@ -19,5 +19,13 @@
   background-color: rgba(217, 249, 244, 0.1);
   position: relative;
   margin-bottom: 7px;
-  height: 70px;
+  height: 4.5em;
+}
+.DailyForecast .days:hover {
+  background-color: rgba(217, 249, 244, 0.2);
+  transition: all 200ms ease-in-out;
+}
+.DailyForecast img {
+  width: 64px;
+  margin-top: -13px;
 }

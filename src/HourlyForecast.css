@@ -14,10 +14,21 @@
   background-color: rgba(217, 249, 244, 0.1);
   border-radius: 4px;
 }
+.HourlyForecast th.hourly-forecast-data:hover {
+  background-color: rgba(217, 249, 244, 0.2);
+  transition: all 200ms ease-in-out;
+}
+.HourlyForecast td.hourly-forecast-data-temp:hover {
+  background-color: rgba(217, 249, 244, 0.2);
+  transition: all 200ms ease-in-out;
+}
 .HourlyForecast th.hourly-forecast-data {
   height: 5.5em;
   line-height: 2.5;
 }
 .HourlyForecast td.hourly-forecast-data-temp {
   height: 2.6em;
+}
+.HourlyForecast img {
+  width: 46px;
 }

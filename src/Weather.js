@@ -101,7 +101,7 @@ export default function Weather() {
             <DailyForecast data={weatherData} />
           </div>
         </div>
-        <SunriseSunset />
+        <SunriseSunset data={weatherData} />
       </div>
     );
   } else {

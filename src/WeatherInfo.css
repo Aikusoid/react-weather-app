@@ -1,16 +1,17 @@
-.WeatherInfo lottie-player {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: -20px;
-  width: 75px;
-  height: 75px;
-}
 .WeatherInfo div.row.today {
   background-color: rgba(202, 231, 235, 0.1);
   border-radius: 5px;
   text-align: center;
   padding: 2%;
   margin: 0 auto;
+}
+.WeatherInfo div.row.today:hover {
+  background-color: rgba(202, 231, 235, 0.2);
+  transition: all 200ms ease-in-out;
+}
+.WeatherInfo img {
+  width: 100px;
+  margin-top: -10px;
 }
 .WeatherInfo div.col-6.weather-description {
   text-align: left;

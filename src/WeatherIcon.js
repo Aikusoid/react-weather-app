@@ -1,35 +1,32 @@
 import React from "react";
-import "./WeatherIcon.css";
 
 export default function WeatherIcon(props) {
   let codeMapping = {
-    "01d": "https://assets9.lottiefiles.com/temp/lf20_Stdaec.json",
-    "01n": "https://assets8.lottiefiles.com/temp/lf20_y6mY2A.json",
-    "02d": "https://assets8.lottiefiles.com/temp/lf20_dgjK9i.json",
-    "02n": "https://assets1.lottiefiles.com/temp/lf20_Jj2Qzq.json",
-    "03d": "https://assets9.lottiefiles.com/temp/lf20_VAmWRg.json",
-    "03n": "https://assets9.lottiefiles.com/temp/lf20_VAmWRg.json",
-    "04d": "https://assets9.lottiefiles.com/temp/lf20_VAmWRg.json",
-    "04n": "https://assets9.lottiefiles.com/temp/lf20_VAmWRg.json",
-    "09d": "https://assets8.lottiefiles.com/temp/lf20_rpC1Rd.json",
-    "09n": "https://assets1.lottiefiles.com/temp/lf20_I5XMi9.json",
-    "10d": "https://assets8.lottiefiles.com/temp/lf20_rpC1Rd.json",
-    "10n": "https://assets1.lottiefiles.com/temp/lf20_I5XMi9.json",
-    "11d": "https://assets9.lottiefiles.com/temp/lf20_XkF78Y.json",
-    "11n": "https://assets9.lottiefiles.com/temp/lf20_XkF78Y.json",
-    "13d": "https://assets8.lottiefiles.com/temp/lf20_BSVgyt.json",
-    "13n": "https://assets3.lottiefiles.com/temp/lf20_RHbbn6.json",
-    "50d": "https://assets1.lottiefiles.com/temp/lf20_HflU56.json",
-    "50n": "https://assets1.lottiefiles.com/temp/lf20_kOfPKE.json",
+    "01d": "svgs/day.svg",
+    "01n": "svgs/night.svg",
+    "02d": "svgs/cloudy-day-1.svg",
+    "02n": "svgs/cloudy-night-1.svg",
+    "03d": "svgs/cloudy.svg",
+    "03n": "svgs/cloudy.svg",
+    "04d": "svgs/cloudy.svg",
+    "04n": "svgs/cloudy.svg",
+    "09d": "svgs/rainy-3.svg",
+    "09n": "svgs/rainy-4.svg",
+    "10d": "svgs/rainy-2.svg",
+    "10n": "svgs/rainy-6.svg",
+    "11d": "svgs/thunder.svg",
+    "11n": "svgs/thunder.svg",
+    "13d": "svgs/snowy-3.svg",
+    "13n": "svgs/snowy-6.svg",
+    "50d": "svgs/cloudy.svg",
+    "50n": "svgs/cloudy.svg",
   };
 
   return (
-    <lottie-player
+    <img
+      className="WeatherIcon"
       src={codeMapping[props.code]}
-      background="transparent"
-      speed="1.5"
-      loop
-      autoplay
-    ></lottie-player>
+      alt={props.alt}
+    />
   );
 }

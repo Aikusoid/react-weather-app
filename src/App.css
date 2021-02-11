@@ -23,9 +23,6 @@ body {
   width: 265px;
   padding: 1%;
 }
-.App img {
-  width: 100%;
-}
 .App div.col.daily-forecast {
   margin: 0 0 8px;
   padding: 1%;
