@@ -6,8 +6,8 @@ import DailyForecast from "./DailyForecast";
 import SunriseSunset from "./SunriseSunset";
 import axios from "axios";
 
-export default function Weather() {
-  const [city, setCity] = useState(null);
+export default function Weather(props) {
+  const [city, setCity] = useState(props.defaultCity);
   const [requiredCity, setRequiredCity] = useState(null);
   const [weatherData, setWeatherData] = useState({ ready: false });
   const apiKey = `b81cb38c0b17e133191f4fac4a0b3833`;
@@ -107,22 +107,18 @@ export default function Weather() {
       </div>
     );
   } else {
-    function getCurrentLocation(position) {
-      let geoReverseApiUrl = `${root}/geo/1.0/reverse?lat=${position.coords.latitude}&lon=${position.coords.longitude}&limit=1&appid=${apiKey}`;
-      axios.get(geoReverseApiUrl).then(function (response) {
-        setRequiredCity(
-          `${response.data[0].name}, ${response.data[0].country}`
-        );
-      });
-
-      let endPointByLoc = `${root}/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-      axios.get(endPointByLoc).then(handleResponse);
+    function search() {
+      let geoDirectApiUrl = `${root}/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`;
+      axios.get(geoDirectApiUrl).then(getCoords);
     }
 
-    function getMyLocation() {
-      navigator.geolocation.getCurrentPosition(getCurrentLocation);
+    function getCoords(response) {
+      let endPointByCity = `${root}/data/2.5/onecall?lat=${response.data[0].lat}&lon=${response.data[0].lon}&appid=${apiKey}&units=metric`;
+      axios.get(endPointByCity).then(handleResponse);
+      setRequiredCity(`${response.data[0].name}, ${response.data[0].country}`);
     }
-    getMyLocation();
+    search();
+
     return (
       <Loader
         type="Puff"
