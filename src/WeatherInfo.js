@@ -44,7 +44,7 @@ export default function WeatherInfo(props) {
           <p>
             Wind speed:{" "}
             <span id="wind-speed">{Math.round(props.data.wind)}</span>
-            <span className="units"> m/sec</span>
+            <span className="units"> m/s</span>
             <br />
             Pressure: <span id="pressure">{props.data.pressure}</span>
             <span className="units"> hPa</span>

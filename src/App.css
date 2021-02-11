@@ -1,7 +1,8 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: white;
-  background-image: linear-gradient(357deg, #a007178b 0%, #0059a7c9 90%);
+  /* background-image: linear-gradient(357deg, #ff3c008b 0%, #0572b5c9 90%); */
+  background-color: rgba(43, 72, 76, 0.925);
   line-height: 1.5;
 }
 .App {

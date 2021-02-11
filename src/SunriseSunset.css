@@ -5,6 +5,10 @@
   border-radius: 5px;
   background-color: rgba(217, 249, 244, 0.1);
 }
+.SunriseSunset div.row.sun-position:hover {
+  background-color: rgba(217, 249, 244, 0.2);
+  transition: all 200ms ease-in-out;
+}
 .SunriseSunset div.col-12.sun-img {
   width: 100%;
   padding: 1%;
@@ -18,12 +22,12 @@
   text-align: left;
   font-weight: bold;
   font-size: 15px;
-  padding-left: 55px;
+  padding-left: 29px;
   padding-bottom: 15px;
 }
 .SunriseSunset div.col-6.sunset {
   text-align: right;
-  padding-right: 67px;
+  padding-right: 29px;
   padding-bottom: 15px;
   font-weight: bold;
   font-size: 15px;
