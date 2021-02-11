@@ -25,6 +25,8 @@ export default function Weather() {
       icon: response.data.current.weather[0].icon,
       date: new Date(response.data.current.dt * 1000),
       forecast: response.data,
+      sunrise: new Date(response.data.current.sunrise * 1000),
+      sunset: new Date(response.data.current.sunset * 1000),
     });
   }
 
@@ -124,7 +126,7 @@ export default function Weather() {
     return (
       <Loader
         type="Puff"
-        color="#white"
+        color="#FFFFFF"
         height={100}
         width={100}
         timeout={3000}

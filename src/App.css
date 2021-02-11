@@ -29,38 +29,6 @@ body {
   color: white;
   min-width: 265px;
 }
-.App div.row.sun-position {
-  font-size: 15px;
-  padding: 1%;
-  margin: 1%;
-  border-radius: 5px;
-  background-color: rgba(217, 249, 244, 0.1);
-}
-.App div.col-12.sun-img {
-  width: 100%;
-  padding: 1%;
-}
-.App img.sun-position {
-  width: 100%;
-  padding: 20px;
-  display: block;
-  margin: 0 auto;
-}
-.App div.col-6.sunrise {
-  text-align: left;
-  font-weight: bold;
-  font-size: 15px;
-  padding-left: 25px;
-  padding-bottom: 15px;
-}
-.App div.col-6.sunset {
-  text-align: right;
-  padding-right: 25px;
-  padding-bottom: 15px;
-  font-weight: bold;
-  font-size: 15px;
-}
-
 .App #search-city {
   display: inline;
   margin-left: -10px;
