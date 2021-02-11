@@ -5,7 +5,10 @@
   color: rgb(255, 255, 255);
   font-size: 13px;
 }
-
+.Footer a.source {
+  color: #1a7ab6;
+  text-decoration: none;
+}
 .Footer a.source:hover {
   text-decoration: underline;
 }
