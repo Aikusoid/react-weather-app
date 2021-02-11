@@ -10,12 +10,10 @@ export default function Weather() {
   const [city, setCity] = useState(null);
   const [requiredCity, setRequiredCity] = useState(null);
   const [weatherData, setWeatherData] = useState({ ready: false });
-  const [hourlyForecast, setHourlyForecast] = useState(null);
   const apiKey = `b81cb38c0b17e133191f4fac4a0b3833`;
   const root = `https://api.openweathermap.org`;
 
   function handleResponse(response) {
-    setHourlyForecast(response.data);
     setWeatherData({
       ready: true,
       currentTemp: response.data.current.temp,
@@ -126,7 +124,7 @@ export default function Weather() {
     return (
       <Loader
         type="Puff"
-        color="#00BFFF"
+        color="#white"
         height={100}
         width={100}
         timeout={3000}

@@ -23,77 +23,6 @@ body {
   width: 265px;
   padding: 1%;
 }
-.App div.row.today {
-  background-color: rgba(202, 231, 235, 0.2);
-  border-radius: 5px;
-  text-align: center;
-  padding: 1%;
-  margin: 0 auto;
-}
-.App div.col-6.weather-description {
-  text-align: left;
-  font-size: 12px;
-  margin-top: 10px;
-}
-.App div.col-6.pressure-wind.weather-description {
-  padding-left: 1px;
-}
-.App span#description {
-  text-align: center;
-  display: block;
-  font-weight: bold;
-  font-size: 14px;
-}
-.App p {
-  margin: 0 auto;
-}
-.App canvas {
-  width: 45%;
-  margin: 10px 0;
-}
-.App span.current-date {
-  font-size: 16px;
-}
-.App div.WeatherTemp {
-  font-size: 27px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-.App a#celsius,
-.App a#fahrenheit {
-  color: white;
-}
-.App span.units.convert {
-  font-size: 15px;
-  position: relative;
-  top: -12px;
-  color: white;
-  font-weight: lighter;
-}
-
-.App .col-12 {
-  padding: 0px;
-}
-.App table.hourly-forecast {
-  border-collapse: separate;
-  border-spacing: 3px;
-  margin: 8px 0;
-  width: 100%;
-  border-radius: 5px;
-}
-.App th.hourly-forecast-data,
-.App td.hourly-forecast-data-temp {
-  width: 20%;
-  background-color: rgba(217, 249, 244, 0.2);
-  border-radius: 4px;
-}
-.App th.hourly-forecast-data {
-  height: 5.5em;
-  line-height: 2.5;
-}
-.App td.hourly-forecast-data-temp {
-  height: 2.6em;
-}
 .App img {
   width: 100%;
 }
@@ -103,24 +32,12 @@ body {
   color: white;
   min-width: 265px;
 }
-.App div.row.daily-forecast {
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding: 4px 0;
-  font-size: 15px;
-  border-radius: 5px;
-}
-.App div.forecast-date {
-  text-align: left;
-  padding-left: 30px;
-}
 .App div.row.sun-position {
   font-size: 15px;
   padding: 1%;
   margin: 1%;
   border-radius: 5px;
-  background-color: rgba(217, 249, 244, 0.2);
+  background-color: rgba(217, 249, 244, 0.1);
 }
 .App div.col-12.sun-img {
   width: 100%;
@@ -191,14 +108,6 @@ body {
 .App #required-city {
   font-weight: bold;
   font-size: 25px;
-}
-
-.App .days {
-  border-radius: 4px;
-  background-color: rgba(217, 249, 244, 0.2);
-  position: relative;
-  margin-bottom: 7px;
-  height: 61px;
 }
 .App .weather-forecast-info {
   margin: 15px 0;

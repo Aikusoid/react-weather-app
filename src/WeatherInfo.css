@@ -5,3 +5,47 @@
   width: 75px;
   height: 75px;
 }
+.WeatherInfo div.row.today {
+  background-color: rgba(202, 231, 235, 0.1);
+  border-radius: 5px;
+  text-align: center;
+  padding: 2%;
+  margin: 0 auto;
+}
+.WeatherInfo div.col-6.weather-description {
+  text-align: left;
+  font-size: 12px;
+  margin-top: 10px;
+  padding-top: 4px;
+}
+.WeatherInfo div.col-6.pressure-wind.weather-description {
+  padding-left: 1px;
+}
+.WeatherInfo span#description {
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+.WeatherInfo p {
+  margin: 0 auto;
+}
+.WeatherInfo span.current-date {
+  font-size: 16px;
+}
+.WeatherInfo div.WeatherTemp {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.WeatherInfo a#celsius,
+.WeatherInfo a#fahrenheit {
+  color: white;
+}
+.WeatherInfo span.units.convert {
+  font-size: 15px;
+  position: relative;
+  top: -12px;
+  color: white;
+  font-weight: lighter;
+}

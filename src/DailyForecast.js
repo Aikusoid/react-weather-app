@@ -1,6 +1,8 @@
 import React from "react";
 import DailyForecastItem from "./DailyForecastItem";
 
+import "./DailyForecast.css";
+
 export default function DailyForecast(props) {
   function formatDate(date) {
     let weekDays = [`Sun.`, `Mon.`, `Tue.`, `Wed.`, `Thu.`, `Fri.`, `Sat.`];

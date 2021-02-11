@@ -1,0 +1,23 @@
+.DailyForecast .daily-forecast-temp {
+  margin-top: 7px;
+}
+
+.DailyForecast div.row.daily-forecast {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 4px 0;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.DailyForecast div.forecast-date {
+  text-align: left;
+  padding-left: 30px;
+}
+.DailyForecast .days {
+  border-radius: 4px;
+  background-color: rgba(217, 249, 244, 0.1);
+  position: relative;
+  margin-bottom: 7px;
+  height: 70px;
+}

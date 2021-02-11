@@ -2,6 +2,8 @@ import React from "react";
 import HourlyForecastItem from "./HourlyForecastItem";
 import HourlyForecastTemp from "./HourlyForecastTemp";
 
+import "./HourlyForecast.css";
+
 export default function HourlyForecast(props) {
   return (
     <div className="HourlyForecast">
